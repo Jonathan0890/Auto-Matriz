@@ -20,22 +20,78 @@
                         <a href="{{ url('/') }}" class="hover:text-red-600">Inicio</a>
                     </li>
                     <li>
-                        <a href="" class="hover:text-red-600">Sobre nosotros</a>
+                        <a href="{{ url('/nos') }}" class="hover:text-red-600">Sobre nosotros</a>
                     </li>
                     <li>
                         <a href="{{ url('/servicio') }}" class="hover:text-red-600">Servicio</a>
                     </li>
                     <li>
-                        <a href="" class="hover:text-red-600">Login</a>
+                        <a href="{{ url('/contact') }}" class="hover:text-red-600">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/login') }}" class="hover:text-red-600">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/admin') }}" class="hover:text-red-600">Login</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    
     <div class="mt-10">
         @yield('content')
     </div>
+
+    <footer class="bg-[#9DB2BF] py-6">
+        <div class="container mx-auto">
+            <div class="flex justify-end space-x-6">
+                <!-- Facebook -->
+                <div class="text-center">
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('discord.svg') }}" alt="Logo de Facebook" class="w-14 h-14 mx-auto">
+                    </a>
+                    <p class="text-white text-xs mt-2">Facebook</p>
+                </div>
+                <!-- Instagram -->
+                <div class="text-center">
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('discord.svg') }}" alt="Logo de Instagram" class="w-14 h-14 mx-auto">
+                    </a>
+                    <p class="text-white text-xs mt-2">Instagram</p>
+                </div>
+                <!-- Twitter -->
+                <div class="text-center">
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('discord.svg') }}" alt="Logo de Twitter" class="w-14 h-14 mx-auto">
+                    </a>
+                    <p class="text-white text-xs mt-2">Twitter</p>
+                </div>
+                <!-- YouTube -->
+                <div class="text-center">
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="{{ asset('discord.svg') }}" alt="Logo de YouTube" class="w-14 h-14 mx-auto">
+                    </a>
+                    <p class="text-white text-xs mt-2">YouTube</p>
+                </div>
+                <!-- Discord -->
+                <div class="text-center">
+                    <a href="#" target="_blank">
+                        <img src="{{ asset('discord.svg') }}" alt="Logo de Discord" class="w-14 h-14 mx-auto">
+                    </a>
+                    <p class="text-white text-xs mt-2">Discord</p>
+                </div>
+            </div>
+            <div class="text-center mt-6 text-white">
+                <h4 class="font-semibold text-lg">Copyright © 2022</h4>
+                <p class="mt-2 bg-brown-500 p-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minima adipisci voluptatibus ullam enim recusandae debitis at saepe nulla vero, distinctio qui vel eligendi animi blanditiis quos! Dignissimos, ducimus sit?
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
 </body>
 
 </html>
