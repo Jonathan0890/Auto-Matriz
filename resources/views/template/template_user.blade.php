@@ -12,8 +12,8 @@
 <body class="font-sans antialiased bg-[#27374D]">
     <header class="py-10 bg-[#000000]">
         <div class="container mx-auto flex items-center justify-between">
-            <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg"
-                alt="Logo" width="200" height="200" class="rounded-full">
+            <img src="{{ asset('image.png') }}" 
+                alt="Logo" class="rounded-full ">
             <nav class="flex-grow ml-20">
                 <ul class="flex justify-end space-x-10 text-lg text-white">
                     <li>
@@ -33,7 +33,8 @@
                     </li>
                     <li>
                         <a href="{{ url('/admin') }}" class="hover:text-red-600">Login</a>
-                    </li>
+                    </li> 
+                    
                 </ul>
             </nav>
         </div>

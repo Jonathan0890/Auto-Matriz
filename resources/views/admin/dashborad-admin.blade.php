@@ -7,15 +7,15 @@ Dashboard
 @section('content')
 <body class="w-screen h-screen bg-gray-100 text-sm font-sans overflow-x-hidden">
     <div class="flex w-[118%] mx-auto gap-5">
-        <main class="ml-64 p-5 flex-1">
+        <main class="ml-30 p-2 flex-1">
             <h1 class="text-2xl font-bold mb-3">Dashboard</h1>
             <div class="bg-gray-200 inline-block rounded-lg px-4 py-2 mb-5">
                 <input type="date" class="bg-transparent text-gray-800">
             </div>
-            <div class="grid grid-cols-3 gap-5">
-                <div class="bg-white p-7 rounded-2xl shadow-lg hover:shadow-none transition-shadow duration-300 ">
-                    <span class="material-symbols-outlined bg-teal-500 text-white p-2 rounded-full text-3xl mb-3 ">
-                        ANALYTICS
+            <div class="grid grid-cols-4 gap-10">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-none transition-shadow duration-300">
+                    <span class="material-symbols-outlined bg-teal-500 text-white p-2 rounded-full text-3xl mb-3">
+                        analytics
                     </span>
                     <div class="flex items-center justify-between">
                         <div class="mt-3">
@@ -42,7 +42,7 @@ Dashboard
                             <h3 class="text-lg font-medium">Impuestos</h3>
                             <h1 class="text-2xl font-bold">$25,000</h1>
                         </div>
-                    </div            >
+                    </div>
                     <div class="relative w-24 h-24 mt-4">
                         <svg class="absolute inset-0">
                             <circle cx="38" cy="38" r="36" class="stroke-red-500 stroke-[14px] stroke-dasharray-[80] stroke-dashoffset-[20] fill-none"></circle>
@@ -75,8 +75,8 @@ Dashboard
                 </div>
             </div>
             <div class="mt-8">
-                <h2 class="text-xl font-bold mb-4">Recent Orders</h2>
-                <table class="w-full bg-white rounded-2xl p-7 shadow-lg hover:shadow-none transition-shadow duration-300">
+                <h2 class="text-xl font-bold mb-4  ">Recent Orders</h2>
+                <table class="w-[85%] bg-white rounded-2xl p-7 shadow-lg hover:shadow-none transition-shadow duration-300">
                     <thead>
                         <tr class="text-left">
                             <th class="py-2">Product</th>
@@ -121,6 +121,4 @@ Dashboard
         </main>
     </div>
 </body>
-
-
 @endSection

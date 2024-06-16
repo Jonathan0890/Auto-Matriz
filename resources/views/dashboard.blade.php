@@ -18,7 +18,7 @@
 
 
 
-<aside class="bg-gray-800 text-white h-screen">
+<aside class="bg-gray-800 text-white h-screen         rounded-md shadow-md">
     <div class="flex items-center justify-between p-5 bg-white text-gray-800">
         <div class="flex gap-2 items-center">
             <img src="../../../assets/facebook.svg" alt="logo" class="w-8 h-8">
