@@ -5,8 +5,8 @@ Dashboard
 @endSection
 
 @section('content')
-<body class="w-screen h-screen bg-gray-100 text-sm font-sans overflow-x-hidden">
-    <div class="flex w-[118%] mx-auto gap-5">
+<body class="w-screen h-screen bg-gray-100 text-sm font-sans overflow-x-hidden ">
+    <div class="flex w-[120%] mx-auto gap-6">
         <main class="ml-30 p-2 flex-1">
             <h1 class="text-2xl font-bold mb-3">Dashboard</h1>
             <div class="bg-gray-200 inline-block rounded-lg px-4 py-2 mb-5">
@@ -75,8 +75,8 @@ Dashboard
                 </div>
             </div>
             <div class="mt-8">
-                <h2 class="text-xl font-bold mb-4  ">Recent Orders</h2>
-                <table class="w-[85%] bg-white rounded-2xl p-7 shadow-lg hover:shadow-none transition-shadow duration-300">
+                <h2 class="text-xl font-bold mb-4">Recent Orders</h2>
+                <table class="w-[80%] bg-white rounded-2xl p-7 shadow-lg hover:shadow-none transition-shadow duration-300">
                     <thead>
                         <tr class="text-left">
                             <th class="py-2">Product</th>

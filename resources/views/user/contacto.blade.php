@@ -5,27 +5,36 @@
 @endSection
 
 @section('content')
-
-    <div class="background-image flex items-center justify-center">
-        <div class="text-white text-center">
-            <div class="mb-4">
-                <img src="{{ asset('image.png') }}" alt="Automatriz Logo" class="mx-auto">
-                <p class="text-lg">suc28@automatrizz.com</p>
-                <p class="text-lg">Tel. 998 607 8601</p>
-                <p class="text-lg">Cel. 998 179 5843</p>
-                <p class="text-lg">Automatriz Cancun</p>
+<div class="text-zinc-800 dark:text-white min-h-screen flex flex-col items-center">
+    <div class="flex flex-row items-start mt-16 space-x-[80px]">
+        <div class="bg-zinc-800 dark:bg-zinc-900 rounded-full w-96 h-96 flex items-center justify-center">
+            <img src="https://placehold.co/300x150" alt="Automotriz Logo" class="w-64">
+        </div>
+        <div class="flex flex-col justify-center space-y-6">
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/20x20" alt="Email Icon" class="w-5 h-5">
+                <span>suc28@automatriz.com</span>
             </div>
-            <div class="flex justify-center space-x-4">
-                <a href="#" target="_blank" class="text-white"><i class="fas fa-envelope"></i></a>
-                <a href="#" target="_blank" class="text-white"><i class="fas fa-phone"></i></a>
-                <a href="#" target="_blank" class="text-white"><i class="fas fa-mobile-alt"></i></a>
-                <a href="#" target="_blank" class="text-white"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
-                <p class="absolute bottom-0 w-full text-center text-white mb-4">
-                    Av. José López Portillo, Mza. 17, Lt. 5 SM. 59
-                </p>
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/20x20" alt="Phone Icon" class="w-5 h-5">
+                <span>Tel. 998 607 8601</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/20x20" alt="Cell Icon" class="w-5 h-5">
+                <span>Cel. 998 179 5843</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img src="https://placehold.co/20x20" alt="Location Icon" class="w-5 h-5">
+                <span>Automatriz Cancun</span>
+            </div>
+            <div class="flex items-center space-x-6 mt-6">
+                <img src="https://placehold.co/20x20" alt="Facebook Icon" class="w-5 h-5">
+                <img src="https://placehold.co/20x20" alt="Instagram Icon" class="w-5 h-5">
             </div>
         </div>
+    </div>
+    <div class="mt-12 text-center">
+        <p>Av. José Lópes Portillo, Mza. 17, Lt. 5 SM. 59</p>
     </div>
 
     <div class="flex justify-center items-center h-screen">
@@ -34,4 +43,8 @@
             width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
+</div>
+
+
 @endsection

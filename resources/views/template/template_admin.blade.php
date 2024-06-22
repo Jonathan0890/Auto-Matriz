@@ -16,8 +16,8 @@
             </button>
         </div>
         <div class="flex flex-col items-center p-4">
-            <div class="mb-6 rounded-circle">
-                <img src="{{ asset('image.png') }}" alt="Logo" class="w-[200px] h-[100px]">
+            <div class="mb-6 rounded-circle"><a href="/">
+                <img src="{{ asset('image.png') }}" alt="Logo" class="w-[200px] h-[100px]"></a>
             </div>
             <nav class="w-full">
                 <ul class="flex flex-col w-full">

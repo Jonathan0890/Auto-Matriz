@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="mt-4 flex items-center justify-center">
+        <div class="mt-[80px] flex items-center justify-center">
             <div class=" w-1/2 p-4">
                 <h1 class="text-3xl">Servicios Posteriores</h1>
                 <p class="mt-4 ">XD<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Totam dignissimos
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="mt-4 flex items-center justify-center">
+        <div class="mt-[80px] flex items-center justify-center">
             <div class="w-1/2 p-4">
                 <img src="{{ asset('descargar.jpg') }}" alt="" class="mx-auto">
             </div>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="mt-4 flex items-center justify-center">
+        <div class="mt-[80px] flex items-center justify-center">
             <div class=" w-1/2 p-4">
                 <h1 class="text-3xl">Servicios Posteriores</h1>
                 <p class="mt-4">XD<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Totam dignissimos
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="mt-4 flex items-start ">
+        <div class="mt-[80px] flex items-start ">
             <div class="w-1/2 p-4">
                 <img src="{{ asset('descargar.jpg') }}" alt="" class="mx-auto">
             </div>
