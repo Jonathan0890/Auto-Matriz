@@ -30,11 +30,9 @@
                     <li>
                         <a href="{{ url('/login') }}" class="hover:text-red-600">Login</a>
                     </li>
-                    @role('admin')
                     <li>
                         <a href="{{ url('/admin') }}" class="hover:text-red-600">Admin</a>
                     </li>
-                    @endrole
                     <!--
                     <li class="relative">
                         <a class="nav-link inline-flex items-center justify-between w-full text-sm font-medium" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">

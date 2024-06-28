@@ -13,18 +13,16 @@ return new class extends Migration
     {
         Schema::create('facturacions', function (Blueprint $table) {
             $table->id();
-            $table->string('factura');
-            $table->string('fecha');
+            $table->string('number_factura')->unique();
+            $table->string('cliente_id');
+            $table->string('fecha_emision');
+            $table->string('fecha_vencimiento');
             $table->string('total');
             $table->string('estado');
-            $table->string('user_id');
-            $table->string('cliente_id');
-            $table->string('servicio_id');
-            $table->string('sede_id');
-            $table->string('estado_id');
             $table->string('observacion');
-            $table->string('imagen');
             $table->timestamps();
+
+     //       $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
         });
     }
 

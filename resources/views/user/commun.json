@@ -1,0 +1,176 @@
+//vista de la sección Nosotros, Repetir para cada idioma de la aplicación web 
+
+
+{
+    "mission": "Misión",
+    "mission_content": "Ser una empresa rentable con crecimiento y mejora continua mediante procesos sustentados <br> ofreciendo un servicio de la más alta calidad basada en los valores de un equipo de profesionales <br> capacitados y enfocados en la satisfacción del cliente.",
+    "vision": "Visión",
+    "vision_content": "Lograr ser la primera opción para nuestros clientes en servicio automotriz y bodyshop multimarca",
+    "values": "Valores",
+    "values_list": {
+        "safety": "Seguridad",
+        "respect": "Respeto",
+        "honesty": "Honestidad",
+        "environment": "Cuidado del medio ambiente",
+        "customer_service": "Atención al cliente"
+    },
+    "history": "Historia",
+    "history_content": "Nuestra empresa fue fundada en 2018 por un equipo de profesionales de la mejor manera posible.",
+
+
+    // vista de la sección Contacto, Repetir para cada idioma de la aplicación web 
+
+
+    "contact_title": "Contacto",
+    "email": "suc28@automatriz.com",
+    "phone": "Tel. 998 607 8601",
+    "cell": "Cel. 998 179 5843",
+    "location": "Automatriz Cancun",
+    "address": "Av. José Lópes Portillo, Mza. 17, Lt. 5 SM. 59",
+
+
+    // vista de la sección Servicios, Repetir para cada idioma de la aplicación web 
+
+
+    "service_title": "Servicio",
+    "maintenance_packages": "Paquetes de Mantenimiento",
+    "services": [
+        {
+            "title": "Soy Servicio 1",
+            "description": "Cambio de aceite de motor y filtro de aceite Desde:"
+        },
+        {
+            "title": "Soy Servicio 2",
+            "description": "Cambio de aceite de motor y filtro de motor + Estética de motor y carrocería Desde:"
+        },
+        {
+            "title": "Soy Servicio 3",
+            "description": "Afinacion mayor al motor + Estética de motor + Lavado de carrocería y Aspirado Desde"
+        },
+        {
+            "title": "Soy Servicio 4",
+            "description": "Afinacion mayor + Lavado Engrasado + Estética de motor, lavado de carrocería y Aspirado Desde"
+        },
+        {
+            "title": "Soy Servicio 5",
+            "description": "Un juego de frenos (Del. O Tras.) + Estética de motor, lavado de carrocería y Aspirado Desde"
+        },
+        {
+            "title": "Soy Servicio 6",
+            "description": "Cambio de frenos generales + Lavado y engrasado + Estética de motor. Desde"
+        },
+        {
+            "title": "Soy Servicio 7",
+            "description": "Cambio de anticongelante + Aceite y Filtro + Estética de motor, Lavado de carrocería Desde: $799 y por solo:"
+        },
+        {
+            "title": "Soy Servicio 8",
+            "description": "Pulido encerado y abrillantado de carrocería + rejuvenecimiento de faros + Aspirado Desde"
+        },
+        {
+            "title": "Soy Servicio 9",
+            "description": "Servicio completo de lavado y engrasado + Pulido y encerado de carrocería + Estética de motor + Lavado de vestieras Desde:"
+        },
+        {
+            "title": "Soy Servicio 10",
+            "description": "Lavado de vestiduras + Estudio de motor + Lavado de carrocería desde:"
+        }
+    ],
+    "work_areas_title": "Areas de Trabajo",
+    "work_areas": [
+        {
+            "title": "Mecánica preventiva y correctiva",
+            "items": [
+                "Afinaciones",
+                "Cambio de aceite y filtro",
+                "Cambio de filtro de aire y gasolina",
+                "Bujías",
+                "Bobina y cables de bujías",
+                "Frenos",
+                "Clutch",
+                "Suspensiones completas",
+                "Dirección hidráulica y mecánica",
+                "Amortiguadores",
+                "Rótulas",
+                "Varillas y terminales de dirección",
+                "Cajas de dirección",
+                "Sistema de aire acondicionado",
+                "Radiadores",
+                "Mangueras",
+                "Tomas de agua",
+                "Bombas de aceite de motor",
+                "Bomba de gasolina",
+                "Bomba de dirección hidráulica",
+                "Cambio de banda dentada de distribución",
+                "Poleas guías y polea tensora",
+                "Banda de motor",
+                "Baleros de ruedas y mazas",
+                "Flechas (Reparación o cambio)",
+                "Diferenciales",
+                "Transmisiones Automáticas o manuales",
+                "Motor (Reconstruir o cambiar)",
+                "Cabezas de motor (Reparar)",
+                "Mofles",
+                "Extracción de tornillos y mucho más"
+            ]
+        },
+        {
+            "title": "Sistema eléctrico y electronico",
+            "items": [
+                "Marchas",
+                "Alternadores",
+                "Baterías",
+                "Terminales de baterías",
+                "Sensores",
+                "Solenoides",
+                "Electroválvulas",
+                "Luces",
+                "Direcciones",
+                "Motor limpiaparabrisas",
+                "Sistema de ABS",
+                "Sistema de bolsas de aire (Airbag)",
+                "Control electrónico de tracción",
+                "Computadoras y módulos",
+                "Cableado",
+                "Conectores",
+                "Estéreos",
+                "Bocinas",
+                "Antenas",
+                "Asientos eléctricos",
+                "Encendedores"
+            ]
+        },
+        {
+            "title": "Estética automotriz",
+            "items": [
+                "Lavado de tapicería, asientos, puertas, techos, tableros y alfombras profesional",
+                "Pulido, encerado y abrillantado de carrocería",
+                "Descontaminación de pintura",
+                "Lavado y engrasado de chasis",
+                "Lavado y estética de motor",
+                "Servicio de tapicería, reparación de asientos, techos, puertas y volantes",
+                "Desinfección de interiores y sistema de aire acondicionado"
+            ]
+        },
+        {
+            "title": "Hojalateria y Pintura",
+            "items": [
+                "Pintura general de carrocería",
+                "Aplicación de anticorrosivo",
+                "Reparación de golpes y portazos",
+                "Enderezado de chasis",
+                "Enderezado de cofres, puertas, salpicaderas, etc.",
+                "Reparación de fascias",
+                "Trabajos de soldadura general",
+                "Extracción de tornillos y birlos"
+            ]
+        },
+        {
+            "title": "Rines y Llantas",
+            "items": [
+                "Reparación y enderezado de Rines",
+                "Venta de rines y llantas"
+            ]
+        }
+    ]
+}

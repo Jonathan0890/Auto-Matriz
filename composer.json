@@ -10,6 +10,7 @@
         "botman/driver-web": "^1.5",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "openai-php/laravel": "^0.10.1",
         "spatie/laravel-permission": "^6.7"
     },
     "require-dev": {

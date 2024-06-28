@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('mensajes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('message');
+            $table->string('remitente');
+            $table->string('destinatario');
+            $table->string('contenido');
+            $table->string('asunto');
+            $table->boolean('leido')->default(false);
             $table->timestamps();
+
+      //      $table->foreign('remitente')->references('name')->on('users')->onDelete('cascade');
         });
     }
 

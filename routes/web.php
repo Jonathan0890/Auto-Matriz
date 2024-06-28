@@ -27,7 +27,9 @@ route::get('/', function(){
     return view('user.principal');
 });
 
-
+route::get('/test', function(){
+    return view('test.servicio');
+});
 
 /* temporalmente 
 */
