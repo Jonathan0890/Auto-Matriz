@@ -30,10 +30,10 @@
                 <img src="{{ asset('prin-tres.jpg') }}" alt="" class="mx-auto">
             </div>
             <div class=" w-1/2 p-4">
-                <h1 class="text-3xl">Servicios Posteriores</h1>
-                <p class="mt-4">XD<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>Totam dignissimos
-                    maiores cum perferendis repellat, voluptatum obcaecati! Saepe,<br>necessitatibus. Totam repellendus
-                    tenetur nostrum fuga esse officia placeat distinctio sed porro tempora.</p>
+                <p class="mt-4 text-3xl">Automatriz es un centro de servicio vehicular 
+                    en donde encontrarás una amplia gama de 
+                    servicios relacionados con tu automóvil sin 
+                    tener que ir de un lugar a otro</p>
             </div>
         </div>
 

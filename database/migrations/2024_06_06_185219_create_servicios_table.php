@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('servicios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('descripcion');
-            $table->string('imagen');
-            $table->string('url');
+            $table->text('descripcion');
+            $table->decimal('precio_desde', 8, 2)->nullable(); // Campo opcional para el precio desde
             $table->timestamps();
         });
     }

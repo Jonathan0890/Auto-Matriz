@@ -10,7 +10,7 @@
 </head>
 
 <body class="font-sans antialiased bg-[#27374D]">
-    <header class="py-10 bg-[#000000]">
+    <header class="py-6 bg-[#000000] ">
         <div class="container mx-auto flex items-center justify-between">
             <img src="{{ asset('image.png') }}" alt="Logo" class="rounded-full ">
             <nav class="flex-grow ml-20">
@@ -27,16 +27,34 @@
                     <li>
                         <a href="{{ url('/contact') }}" class="hover:text-red-600">Contacto</a>
                     </li>
+                    @if (Route::has('login'))
+                        @auth
+                            @if (Auth::user()->hasRole('superadmin'))
+                                <li>
+                                    <a href="{{ url('/dashboard') }}" class="hover:text-red-600">Dashboard</a>
+                                </li>
+                            @elseif (Auth::user()->hasRole('admin'))
+                                <li>
+                                    <a href="{{ url('/admin') }}" class="hover:text-red-600">Admin</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="{{ url('/profile') }}" class="hover:text-red-600">Perfil</a>
+                                </li>
+                            @endif
+                        @else
+                            <li>
+                                <a href="{{ url('/login') }}" class="hover:text-red-600">Login</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a href="{{ url('/register') }}" class="hover:text-red-600">Registro</a>
+                                </li>
+                            @endif
+                        @endauth
+                    @endif
+                    
                     <li>
-                        <a href="{{ url('/login') }}" class="hover:text-red-600">Login</a>
-                    </li>
-                    @role('admin')
-                    <li>
-                        <a href="{{ url('/admin') }}" class="hover:text-red-600">Admin</a>
-                    </li>
-                    @endrole
-                    <!--
-                    <li class="relative">
                         <a class="nav-link inline-flex items-center justify-between w-full text-sm font-medium" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <img src="{{ asset('tierra.png') }}" alt="Lenguaje" class="w-[35px] h-[35px]">
                             <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -53,7 +71,7 @@
                             <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="{{ url('lang/ko') }}">한국어</a></li>
                         </ul>
                     </li>
-                    -->
+                    
                 </ul>
             </nav>
         </div>

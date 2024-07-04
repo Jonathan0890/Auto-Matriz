@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Servicio extends Model
+class SubareaTrabajo extends Model
 {
     use HasFactory;
 
-    protected $fillable =[
+    protected $fillable = [
+        'id',
         'nombre',
-        'descripcion',
-        'precio_desde',
+        'area_id',
+        'created_at',
+        'updated_at'
     ];
 }

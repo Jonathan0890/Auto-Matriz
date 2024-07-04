@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
+<body class="font-sans text-gray-900 antialiased ">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 shadow-md overflow-hidden sm:rounded-lg bg-[#DDE6ED]">
         <div class="flex items-center justify-center">
@@ -49,11 +49,6 @@
                 </div>
             </form>
 
-            <button action="{{ route('register') }}"  class="mt-4">
-                <button type="submit" class="ml-3 inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-500 active:bg-indigo-700 focus:outline-none focus:border-indigo-700 focus:ring focus:ring-indigo-200 disabled:opacity-25 transition ease-in-out duration-150">
-                    {{ __('Register') }}
-                </button>
-            </button>
         </div>
     </div>
 </body>
