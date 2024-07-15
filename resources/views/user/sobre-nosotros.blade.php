@@ -45,11 +45,26 @@
             <h1 class="cursor-pointer p-4" onclick="toggleSection(this)">Historia</h1>
             <div class="p-4 hidden transition text-center">
                 <p>
-                    Nuestra empresa fue fundada en 2018 por un equipo de profesionales de la mejor manera posible.
+                    Fundada en 2008 bajo el nombre de Proservice, nuestra empresa comenzó su trayectoria con un firme
+                    compromiso hacia la calidad <br>en el sector automotriz. Dos años después, en 2010, nos trasladamos al
+                    Mercado 23, lo que nos permitió ampliar nuestra capacidad <br>y atender a un mayor número de clientes.
+
+                    En 2013, inauguramos un nuevo taller en la Ciudad de México, expandiendo así <br>nuestra presencia. Un año
+                    más tarde, en 2014, adoptamos el nombre Auto Matríz, reflejando una identidad  más moderna y dinámica.<br>En
+                    2015, nos mudamos de Cancún a  una nueva ubicación, y en 2017 realizamos otro cambio de ubicación,
+                    siempre en busca de <br>mejorar nuestros servicios.
+
+                    En 2018, nombramos a un nuevo representante legal para fortalecer nuestra estructura organizacional. <br>Un
+                    año después, en 2019, grandes empresas como Ecolab, Chedraui y Element confiaron en nosotros, ampliando
+                    nuestra cartera <br>de clientes. A pesar de la pandemia de COVID-19 en 2020, continuamos operando
+                    exitosamente gracias a la dedicación de <br>nuestro equipo y la lealtad de nuestros clientes.
+
+                    Finalmente, en 2022, inauguramos un nuevo taller hermano llamado Multiservicio, reafirmando nuestro
+                    compromiso con el crecimiento y la mejora continua en el sector automotriz.
                 </p>
             </div>
         </div>
-        
+
     </section>
 
     <script>

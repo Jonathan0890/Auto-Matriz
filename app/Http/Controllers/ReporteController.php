@@ -13,7 +13,8 @@ class ReporteController extends Controller
      */
     public function index()
     {
-        //
+        $reportes = Reporte::all();
+        return view('admin.reports.report', compact('reportes'));
     }
 
     /**
@@ -37,7 +38,8 @@ class ReporteController extends Controller
      */
     public function show(Reporte $reporte)
     {
-        //
+        $reporte = Reporte::find($reporte->id);
+        return view('admin.reports.partials.show_rep', compact('reporte'));
     }
 
     /**
@@ -45,7 +47,9 @@ class ReporteController extends Controller
      */
     public function edit(Reporte $reporte)
     {
-        //
+        $reporte = Reporte::find($reporte->id);
+        return view('admin.reports.partials.edit_rep', compact('reporte'));
+
     }
 
     /**
@@ -53,7 +57,8 @@ class ReporteController extends Controller
      */
     public function update(UpdateReporteRequest $request, Reporte $reporte)
     {
-        //
+        $reporte->update($request->all());
+        return redirect()->route('reporte.show', $reporte->id);    
     }
 
     /**
@@ -61,6 +66,7 @@ class ReporteController extends Controller
      */
     public function destroy(Reporte $reporte)
     {
-        //
+        $reporte->delete();
+        return redirect()->route('reporte.index');
     }
 }

@@ -13,7 +13,8 @@ class FacturacionController extends Controller
      */
     public function index()
     {
-        //
+        $facturacions = Facturacion::all(); 
+        return view('admin.facturacion.factura', compact('facturacions'));
     }
 
     /**

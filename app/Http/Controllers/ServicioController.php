@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Servicio;
 use App\Http\Requests\StoreServicioRequest;
 use App\Http\Requests\UpdateServicioRequest;
+use App\Models\AreasTrabajo;
 
 class ServicioController extends Controller
 {
@@ -13,7 +14,9 @@ class ServicioController extends Controller
      */
     public function index()
     {
-        return view('user.servicio');
+        $servicios = Servicio::all();
+        $areasTrabajo = AreasTrabajo::all();
+        return view('user.servicio', compact('servicios','areasTrabajo'));
     }
 
     /**

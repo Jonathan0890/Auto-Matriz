@@ -9,11 +9,16 @@ class SubareaTrabajo extends Model
 {
     use HasFactory;
 
+    protected $table = 'subareas_trabajo';
+
     protected $fillable = [
-        'id',
+        'area_trabajo_id',
         'nombre',
-        'area_id',
-        'created_at',
-        'updated_at'
+        'descripcion',
     ];
+
+    public function areaTrabajo()
+    {
+        return $this->belongsTo(AreasTrabajo::class);
+    }
 }

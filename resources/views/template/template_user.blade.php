@@ -83,51 +83,46 @@
     </div>
 
 
-    <footer class="bg-[#9DB2BF] py-6 ">
+    <footer class="bg-[#4c5c7c] py-6 ">
         <div class="container mx-auto">
             <div class="flex justify-end space-x-6">
-                <!-- Facebook -->
+                <!-- Empleado 1 -->
                 <div class="text-center">
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('discord.svg') }}" alt="Logo de Facebook" class="w-14 h-14 mx-auto">
-                    </a>
-                    <p class="text-white text-xs mt-2">Facebook</p>
+                    <img src="{{ asset('persons.png') }}" alt="Empleado 1" class="w-30 h-20 mx-auto rounded-full">
+                    <p class="text-white text-xs mt-2">Jose Antonio Francisco</p>
+                    <p class="text-white text-xs">9982938678</p>
                 </div>
-                <!-- Instagram -->
+                <!-- Empleado 2 -->
                 <div class="text-center">
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('discord.svg') }}" alt="Logo de Instagram" class="w-14 h-14 mx-auto">
-                    </a>
-                    <p class="text-white text-xs mt-2">Instagram</p>
+                    <img src="{{ asset('persons.png') }}" alt="Empleado 2" class="w-30 h-20 mx-auto rounded-full">
+                    <p class="text-white text-xs mt-2">Nelvin Acopa</p>
+                    <p class="text-white text-xs">9988953263</p>
                 </div>
-                <!-- Twitter -->
+                <!-- Empleado 3 -->
                 <div class="text-center">
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('discord.svg') }}" alt="Logo de Twitter" class="w-14 h-14 mx-auto">
-                    </a>
-                    <p class="text-white text-xs mt-2">Twitter</p>
+                    <img src="{{ asset('persons.png') }}" alt="Empleado 3" class="w-30 h-20 mx-auto rounded-full">
+                    <p class="text-white text-xs mt-2">Juan Carlos Balam</p>
+                    <p class="text-white text-xs">9988603309</p>
                 </div>
-                <!-- YouTube -->
+                <!-- Empleado 4 -->
                 <div class="text-center">
-                    <a href="https://www.youtube.com" target="_blank">
-                        <img src="{{ asset('discord.svg') }}" alt="Logo de YouTube" class="w-14 h-14 mx-auto">
-                    </a>
-                    <p class="text-white text-xs mt-2">YouTube</p>
+                    <img src="{{ asset('persons.png') }}" alt="Empleado 4" class="w-30 h-20 mx-auto rounded-full">
+                    <p class="text-white text-xs mt-2">Armando Eduardo</p>
+                    <p class="text-white text-xs">9982932808</p>
                 </div>
-                <!-- Discord -->
+                <!-- Empleado 5 -->
                 <div class="text-center">
-                    <a href="#" target="_blank">
-                        <img src="{{ asset('discord.svg') }}" alt="Logo de Discord" class="w-14 h-14 mx-auto">
-                    </a>
-                    <p class="text-white text-xs mt-2">Discord</p>
+                    <img src="{{ asset('persons.png') }}" alt="Empleado 5" class="w-30 h-20 mx-auto rounded-full">
+                    <p class="text-white text-xs mt-2">Maria Luisa</p>
+                    <p class="text-white text-xs">9981795843</p>
                 </div>
             </div>
+            
+            
             <div class="text-center mt-6 text-white">
-                <h4 class="font-semibold text-lg">Copyright © 2022</h4>
+                <h4 class="font-semibold text-lg">Copyright © 2022-2025</h4>
                 <p class="mt-2 bg-brown-500 p-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minima adipisci voluptatibus ullam
-                    enim recusandae debitis at saepe nulla vero, distinctio qui vel eligendi animi blanditiis quos!
-                    Dignissimos, ducimus sit?
+
                 </p>
             </div>
         </div>

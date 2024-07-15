@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('reportes', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
+            $table->string('nombre');
+            $table->string('email');
+            $table->string('tipo');
             $table->text('descripcion');
-            $table->string('creado por');
             $table->timestamps();
 
        //     $table->foreign('creado por ')->references('name')->on('users')->onDelete('cascade');

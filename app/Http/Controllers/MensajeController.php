@@ -13,7 +13,8 @@ class MensajeController extends Controller
      */
     public function index()
     {
-        //
+        $mensajes = Mensaje::all();
+        return view('admin.messenge.mensaje', compact('mensajes'));
     }
 
     /**

@@ -16,16 +16,14 @@ class AreasTrabajo extends Model
         'descripcion'
     ];
 
+    public function subareas(){
+
+        return $this->hasMany(SubareaTrabajo::class, 'area_trabajo_id');
+    }
+
 /*
 Para hacer una 
 
 */
-
-
-
-
-
-
-
 
 }
