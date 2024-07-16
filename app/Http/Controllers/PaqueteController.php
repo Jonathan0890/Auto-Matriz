@@ -38,7 +38,8 @@ class PaqueteController extends Controller
      */
     public function show(Paquete $paquete)
     {
-        //
+        $paquete = Paquete::find($paquete->id);
+        return view('admin.paquete.partials.show_paq', compact('paquete'));
     }
 
     /**
@@ -46,7 +47,8 @@ class PaqueteController extends Controller
      */
     public function edit(Paquete $paquete)
     {
-        //
+        $paquete = Paquete::find($paquete->id);
+        return view('admin.paquete.partials.edit_paq', compact('paquete'));
     }
 
     /**
@@ -54,7 +56,8 @@ class PaqueteController extends Controller
      */
     public function update(UpdatePaqueteRequest $request, Paquete $paquete)
     {
-        //
+        $paquete->update($request->all());
+        return redirect()->route('paquetes.show', $paquete->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class PaqueteController extends Controller
      */
     public function destroy(Paquete $paquete)
     {
-        //
+        $paquete->delete();
+        return redirect()->route('paquetes.index');
     }
 }

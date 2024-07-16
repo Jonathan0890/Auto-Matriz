@@ -11,41 +11,59 @@
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
             <thead class="bg-[#b1b1b1] text-white">
                 <tr>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Id</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Estado</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No Orden</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Año</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Placa</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Reporte de cliente</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Kilometraje</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No Economico</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Sub Total</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Impuestos</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Id</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Estado</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">No Orden</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Año</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Placa</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Reporte de cliente</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Kilometraje</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">No Economico</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Sub Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Impuestos</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Editar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Eliminar</th>
+
                 </tr>
             </thead>
             <tbody class="text-gray-700">
                 @foreach($ordeneservs as $ordeneserv)
                 <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->id }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->fecha }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->razonsocial }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->estado }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->no_orden }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->vehiculo }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->modelo }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->anio }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->placa }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->no_economico }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->sub_total }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->impuestos }}</td>
-                    <td class="py-4 px-6 whitespace-nowrap">{{ $ordeneserv->total }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->id }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->fecha }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->razonsocial }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->estado }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_orden }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->vehiculo }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->modelo }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->anio }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->placa }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_economico }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->sub_total }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->impuestos }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->total }}</td>
+                    <td class="py-2 px-3 whitespace-nowrap">
+                        <a href="{{ route('ordenservicio.show', $ordeneserv->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                    </td>
+                    <td class="py-2 px-3 whitespace-nowrap">
+                        <a href="{{ route('ordenservicio.edit', $ordeneserv->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                    </td>
+                    <td class="py-2 px-3 whitespace-nowrap">
+                        <form action="{{ route('ordenservicio.destroy', $ordeneserv->id) }}" method="POST"
+                            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach 
             </tbody>

@@ -78,9 +78,9 @@ Route::name('paquete')->group(function () {
 
 Route::name('factura')->group(function () {
     Route::get('admin/factura', [FacturacionController::class, 'index']);
-    Route::get('admin/factura/{factura}', [FacturacionController::class, 'show'])->name('factura.show');
-    Route::patch('admin/factura/{factura}', [FacturacionController::class, 'update'])->name('factura.update');
-    Route::delete('admin/factura/{factura}', [FacturacionController::class, 'destroy'])->name('factura.destroy');
+    Route::get('/factura/{factura}', [FacturacionController::class, 'show'])->name('facturacion.show');
+    Route::patch('/factura/{factura}', [FacturacionController::class, 'update'])->name('facturacion.update');
+    Route::delete('/factura/{factura}', [FacturacionController::class, 'destroy'])->name('facturacion.destroy');
 });
 
 Route::name('inventario')->group(function () {
@@ -92,37 +92,37 @@ Route::name('inventario')->group(function () {
 
 Route::name('presupuesto')->group(function () {
     Route::get('admin/presupuesto', [PresupuestoController::class, 'index']);
-    Route::get('admin/presupuesto/{presupuesto}', [PresupuestoController::class, 'show'])->name('presupuesto.show');
-    Route::patch('admin/presupuesto/{presupuesto}', [PresupuestoController::class, 'update'])->name('presupuesto.update');
-    Route::delete('admin/presupuesto/{presupuesto}', [PresupuestoController::class, 'destroy'])->name('presupuesto.destroy');
+    Route::get('/presupuesto/{presupuesto}', [PresupuestoController::class, 'show'])->name('presupuesto.show');
+    Route::patch('/presupuesto/{presupuesto}', [PresupuestoController::class, 'update'])->name('presupuesto.update');
+    Route::delete('/presupuesto/{presupuesto}', [PresupuestoController::class, 'destroy'])->name('presupuesto.destroy');
 });
 
 Route::name('mensaje')->group(function () {
     Route::get('admin/mensaje', [MensajeController::class, 'index']);
-    Route::get('admin/mensaje/{mensaje}', [MensajeController::class, 'show'])->name('mensaje.show');
-    Route::patch('admin/mensaje/{mensaje}', [MensajeController::class, 'update'])->name('mensaje.update');
-    Route::delete('admin/mensaje/{mensaje}', [MensajeController::class, 'destroy'])->name('mensaje.destroy');
+    Route::get('/mensaje/{mensaje}', [MensajeController::class, 'show'])->name('mensaje.show');
+    Route::patch('/mensaje/{mensaje}', [MensajeController::class, 'update'])->name('mensaje.update');
+    Route::delete('/mensaje/{mensaje}', [MensajeController::class, 'destroy'])->name('mensaje.destroy');
 });
 
 Route::name('ordenservicio')->group(function () {
     Route::get('admin/orden-servicio', [OrdenServicioController::class, 'index']);
-    Route::get('admin/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'show'])->name('ordenServicio.show');
-    Route::patch('admin/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'update'])->name('ordenServicio.update');
-    Route::delete('admin/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'destroy'])->name('ordenServicio.destroy');
+    Route::get('/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'show'])->name('ordenservicio.show');
+    Route::patch('/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'update'])->name('ordenservicio.update');
+    Route::delete('/orden-servicio/{ordenServicio}', [OrdenServicioController::class, 'destroy'])->name('ordenservicio.destroy');
 });
 
-Route::name('credito')->group(function () {
+Route::name('creditos')->group(function () {
     Route::get('admin/credito', [CreditoController::class, 'index']);
-    Route::get('admin/credito/{credito}', [CreditoController::class, 'show'])->name('credito.show');
-    Route::patch('admin/credito/{credito}', [CreditoController::class, 'update'])->name('credito.update');
-    Route::delete('admin/credito/{credito}', [CreditoController::class, 'destroy'])->name('credito.destroy');
+    Route::get('/credito/{credito}', [CreditoController::class, 'show'])->name('credito.show');
+    Route::patch('/credito/{credito}', [CreditoController::class, 'update'])->name('credito.update');
+    Route::delete('/credito/{credito}', [CreditoController::class, 'destroy'])->name('credito.destroy');
 });
 
 Route::resource('creditos', CreditoController::class);
 Route::resource('paquetes', PaqueteController::class);
 Route::resource('reporte', ReporteController::class);
 Route::resource('mensaje', MensajeController::class);
-Route::resource('factura', FacturacionController::class);
+Route::resource('facturacion', FacturacionController::class);
 Route::resource('inventario', InventarioController::class);
 Route::resource('ordenservicio', OrdenServicioController::class);
 Route::resource('presupuesto', PresupuestoController::class);

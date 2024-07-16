@@ -13,20 +13,41 @@
                 <thead class="bg-[#b1b1b1] text-white">
                     <tr>
                         <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Id</th>
-                        <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Nombre</th>    
-                        <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Email (Correo Electronico)</th>
+                        <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Nombre</th>
+                        <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Email (Correo
+                            Electronico)</th>
                         <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Mensaje</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Editar</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">
-                    @foreach($mensajes as $mensaje) 
-                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->id }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->nombre }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->email }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->mensaje }}</td>
-                    </tr>
-                    @endforeach 
+                    @foreach ($mensajes as $mensaje)
+                        <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
+                            <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->id }}</td>
+                            <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->nombre }}</td>
+                            <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->email }}</td>
+                            <td class="py-4 px-6 whitespace-nowrap">{{ $mensaje->mensaje }}</td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                            <a href="{{ route('mensaje.show', $mensaje->id) }}"
+                                class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                            </td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                                <a href="{{ route('mensaje.edit', $mensaje->id) }}"
+                                    class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                            </td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                            <form action="{{ route('mensaje.destroy', $mensaje->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este mensaje? Esta acción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

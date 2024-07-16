@@ -19,6 +19,9 @@
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Total</th>
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Estado</th>
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Observacion</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Editar</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Eliminar</th>
                 </tr>
             </thead>
             <tbody class="text-gray-700">
@@ -32,7 +35,20 @@
                         <td class="py-4 px-6 whitespace-nowrap">{{ $facturacion->total }}</td>
                         <td class="py-4 px-6 whitespace-nowrap">{{ $facturacion->estado }}</td>
                         <td class="py-4 px-6 whitespace-nowrap">{{ $facturacion->observacion }}</td>
-
+                        <td class="py-4 px-6 whitespace-nowrap">
+                            <a href="{{ route('facturacion.show', $facturacion->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                        </td>
+                        <td class="py-4 px-6 whitespace-nowrap">
+                            <a href="{{ route('facturacion.edit', $facturacion->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                        </td>
+                        <td class="py-4 px-6 whitespace-nowrap">
+                            <form action="{{ route('facturacion.destroy', $facturacion->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </form
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

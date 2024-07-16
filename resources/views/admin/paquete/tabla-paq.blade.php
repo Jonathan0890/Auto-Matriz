@@ -15,6 +15,9 @@
                         <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Id</th>
                         <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Nombre</th>
                         <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Editar</th>
+                        <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-700">
@@ -23,6 +26,20 @@
                             <td class="py-4 px-6 whitespace-nowrap">{{ $paquete->id }}</td>
                             <td class="py-4 px-6 whitespace-nowrap">{{ $paquete->nombre }}</td>
                             <td class="py-4 px-6 whitespace-nowrap">{{ $paquete->total }}</td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                                <a href="{{ route('paquetes.show', $paquete->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                            </td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                                <a href="{{ route('paquetes.edit', $paquete->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                            </td>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                                <form action="{{ route('paquetes.destroy', $paquete->id) }}" method="POST"
+                                    onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

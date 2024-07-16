@@ -38,7 +38,8 @@ class InventarioController extends Controller
      */
     public function show(Inventario $inventario)
     {
-        //
+        $inventario = Inventario::find($inventario->id);
+        return view('admin.inventario.partials.show_inv', compact('inventario'));
     }
 
     /**
@@ -46,7 +47,8 @@ class InventarioController extends Controller
      */
     public function edit(Inventario $inventario)
     {
-        //
+        $inventario = Inventario::find($inventario->id);
+        return view('admin.inventario.partials.edit_inv', compact('inventario'));
     }
 
     /**
@@ -54,7 +56,8 @@ class InventarioController extends Controller
      */
     public function update(UpdateInventarioRequest $request, Inventario $inventario)
     {
-        //
+        $inventario->update($request->all());
+        return redirect()->route('inventario.show', $inventario->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class InventarioController extends Controller
      */
     public function destroy(Inventario $inventario)
     {
-        //
+        $inventario->delete();
+        return redirect()->route('inventario.index');
     }
 }

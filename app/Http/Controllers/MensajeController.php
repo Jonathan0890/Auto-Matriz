@@ -38,7 +38,8 @@ class MensajeController extends Controller
      */
     public function show(Mensaje $mensaje)
     {
-        //
+        $mensaje = Mensaje::find($mensaje->id);
+        return view('admin.messenge.partials.show_men', compact('mensaje'));
     }
 
     /**
@@ -46,7 +47,8 @@ class MensajeController extends Controller
      */
     public function edit(Mensaje $mensaje)
     {
-        //
+        $mensaje = Mensaje::find($mensaje->id);
+        return view('admin.messenge.partials.edit_men', compact('mensaje'));
     }
 
     /**
@@ -54,7 +56,8 @@ class MensajeController extends Controller
      */
     public function update(UpdateMensajeRequest $request, Mensaje $mensaje)
     {
-        //
+        $mensaje->update($request->all());
+        return redirect()->route('mensaje.show', $mensaje->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class MensajeController extends Controller
      */
     public function destroy(Mensaje $mensaje)
     {
-        //
+        $mensaje->delete();
+        return redirect()->route('mensaje.index');
     }
 }

@@ -23,7 +23,7 @@ class FacturacionController extends Controller
     public function create()
     {
         //
-    }
+        }
 
     /**
      * Store a newly created resource in storage.
@@ -38,7 +38,8 @@ class FacturacionController extends Controller
      */
     public function show(Facturacion $facturacion)
     {
-        //
+        $facturacion = Facturacion::find( $facturacion->id );
+        return view('admin.facturacion.partials.show_fact', compact('facturacion'));
     }
 
     /**
@@ -46,7 +47,8 @@ class FacturacionController extends Controller
      */
     public function edit(Facturacion $facturacion)
     {
-        //
+        $facturacion = Facturacion::find( $facturacion->id );
+        return view('admin.facturacion.partials.edit_fact', compact('facturacion'));
     }
 
     /**
@@ -54,7 +56,8 @@ class FacturacionController extends Controller
      */
     public function update(UpdateFacturacionRequest $request, Facturacion $facturacion)
     {
-        //
+        $facturacion->update($request->all());
+        return redirect()->route('facturacion.show', $facturacion->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class FacturacionController extends Controller
      */
     public function destroy(Facturacion $facturacion)
     {
-        //
+        $facturacion->delete();
+        return redirect()->route('facturacion.index');
     }
 }

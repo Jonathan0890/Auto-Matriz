@@ -38,7 +38,8 @@ class OrdenServicioController extends Controller
      */
     public function show(OrdenServicio $ordenServicio)
     {
-        //
+        $ordenServicio = OrdenServicio::find($ordenServicio->id);
+        return view('admin.orden-servicio.partials.show_ord', compact('ordenServicio'));
     }
 
     /**
@@ -46,7 +47,8 @@ class OrdenServicioController extends Controller
      */
     public function edit(OrdenServicio $ordenServicio)
     {
-        //
+        $ordenServicio = OrdenServicio::find($ordenServicio->id);
+        return view('admin.orden-servicio.partials.edit_ord', compact('ordenServicio'));
     }
 
     /**
@@ -54,7 +56,8 @@ class OrdenServicioController extends Controller
      */
     public function update(UpdateOrdenServicioRequest $request, OrdenServicio $ordenServicio)
     {
-        //
+        $ordenServicio->update($request->all());
+        return redirect()->route('ordenservicio.show', $ordenServicio->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class OrdenServicioController extends Controller
      */
     public function destroy(OrdenServicio $ordenServicio)
     {
-        //
+        $ordenServicio->delete();
+        return redirect()->route('ordenservicio.index');
     }
 }

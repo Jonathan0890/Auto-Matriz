@@ -38,7 +38,8 @@ class PresupuestoController extends Controller
      */
     public function show(Presupuesto $presupuesto)
     {
-        //
+        $presupuesto = Presupuesto::find($presupuesto->id);
+        return view('admin.presupuesto.partials.show_pres', compact('presupuesto'));
     }
 
     /**
@@ -46,7 +47,8 @@ class PresupuestoController extends Controller
      */
     public function edit(Presupuesto $presupuesto)
     {
-        //
+        $presupuesto = Presupuesto::find($presupuesto->id);
+        return view('admin.presupuesto.partials.edit_pres', compact('presupuesto'));
     }
 
     /**
@@ -54,7 +56,8 @@ class PresupuestoController extends Controller
      */
     public function update(UpdatePresupuestoRequest $request, Presupuesto $presupuesto)
     {
-        //
+        $presupuesto->update($request->all());
+        return redirect()->route('presupuesto.show', $presupuesto->id);
     }
 
     /**
@@ -62,6 +65,7 @@ class PresupuestoController extends Controller
      */
     public function destroy(Presupuesto $presupuesto)
     {
-        //
+        $presupuesto->delete();
+        return redirect()->route('presupuesto.index');
     }
 }

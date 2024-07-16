@@ -5,10 +5,10 @@
     <div class="bg-white rounded-lg shadow-lg w-full md:w-3/4 mx-auto p-6">
         <div class="p-4">
             <h2 class="text-xl font-semibold mb-4">Información de la Facturación</h2>
-            <div class="grid grid-cols-1 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <label class="text-gray-600">Número de Factura:</label>
-                    <p class="text-gray-800 tracking-normal">{{ $facturacion->number_factura }}</p>
+                    <p class="text-gray-800 tracking-normal">{{$facturacion->number_factura}}</p>
                 </div>
                 <div>
                     <label class="text-gray-600">Cliente ID:</label>
@@ -35,10 +35,10 @@
                     <p class="text-gray-800 tracking-normal">{{ $facturacion->observacion }}</p>
                 </div>
             </div>
-            <div class="mt-6">
-                <a href="{{ route('facturacions.index') }}" class="bg-indigo-500 text-center text-white py-2 px-4 rounded-lg hover:bg-indigo-600 inline-block">REGRESAR</a>
+            <div class="mt-6 flex justify-center">
+                <a href="{{ route('facturacion.index') }}" class="bg-indigo-500 text-center text-white py-2 px-4 rounded-lg hover:bg-indigo-600">REGRESAR</a>
             </div>
         </div>
     </div>
 </div>
-@endSection
+@endsection

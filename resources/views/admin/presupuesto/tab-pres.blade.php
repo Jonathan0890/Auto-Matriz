@@ -11,42 +11,59 @@
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg w-full">
             <thead class="bg-[#b1b1b1] text-white">
                 <tr>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Id</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Estado</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No. Orden</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Año</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Placas</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Reporte de cliente</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Kilometraje</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No. Economico</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Sub Total</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Impuestos</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Id</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Estado</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">No. Orden</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Año</th>
+                    <th class="py-2 px-6 text-left text-xs font-medium uppercase tracking-wider">Placas</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Reporte de cliente</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Kilometraje</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">No. Economico</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Sub Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Impuestos</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="px-2 py-2 text-center text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                    <th class="px-2 py-2 text-center text-xs font-medium uppercase tracking-wider">Editar</th>
+                    <th class="px-2 py-2 text-center text-xs font-medium uppercase tracking-wider">Eliminar</th>
                 </tr>
             </thead>
             <tbody class="text-gray-700 text-sm">
                 @foreach ($presupuestos as $presupuesto)
                     
                     <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->id }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->fecha }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->razon_social }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->estado }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->no_orden }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->vehiculo }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->modelo }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->year }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->placa }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->kilometraje }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->kilometraje }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->no_economico }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->sub_total }}</td>
-                        <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->impuestos }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->id }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->fecha }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->razon_social }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->estado }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->no_orden }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->vehiculo }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->modelo }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->year }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->placa }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->kilometraje }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->kilometraje }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->no_economico }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->sub_total }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">{{ $presupuesto->impuestos }}</td>
                         <td class="py-2 px-4 whitespace-nowrap">{{ $presupuesto->total }}</td>
+                        <td class="py-2 px-2 whitespace-nowrap">
+                            <a href="{{ route('presupuesto.show', $presupuesto->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                        </td>
+                        <td class="py-2 px-2 whitespace-nowrap">
+                            <a href="{{ route('presupuesto.edit', $presupuesto->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                        </td>
+                        <td class="py-2 px-2 whitespace-nowrap">
+                            <form action="{{ route('presupuesto.destroy', $presupuesto->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este presupuesto? Esta opción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

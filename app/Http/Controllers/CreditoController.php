@@ -37,7 +37,8 @@ class CreditoController extends Controller
      */
     public function show(Credito $credito)
     {
-        //
+        $credito = Credito::find($credito->id);
+        return view('admin.credito.partials.show_cred', compact('credito'));
     }
 
     /**
@@ -45,7 +46,8 @@ class CreditoController extends Controller
      */
     public function edit(Credito $credito)
     {
-        //
+        $credito = Credito::find($credito->id);
+        return view('admin.credito.partials.edit_cred', compact('credito'));
     }
 
     /**
@@ -53,7 +55,8 @@ class CreditoController extends Controller
      */
     public function update(UpdateCreditoRequest $request, Credito $credito)
     {
-        //
+        $credito->update($request->all());
+        return redirect()->route('creditos.show', $credito->id);
     }
 
     /**
@@ -61,6 +64,7 @@ class CreditoController extends Controller
      */
     public function destroy(Credito $credito)
     {
-        //
+        $credito->delete();
+        return redirect()->route('creditos.index');
     }
 }

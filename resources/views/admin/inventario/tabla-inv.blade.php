@@ -17,6 +17,9 @@
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Numero de producto</th>
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Descripcion de producto</th>
                     <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Cantidad</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Mostrar</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Editar</th>
+                    <th class="px-4 py-2 text-center text-xs font-medium uppercase tracking-wider">Eliminar</th> 
                 </tr>
             </thead>
             <tbody class="text-gray-700">
@@ -28,6 +31,20 @@
                     <td class="py-4 px-6 whitespace-nowrap">{{ $inventario->numero_producto }}</td>
                     <td class="py-4 px-6 whitespace-nowrap">{{ $inventario->descripcion_producto }}</td>
                     <td class="py-4 px-6 whitespace-nowrap">{{ $inventario->cantidad }}</td>
+                    <td class="py-4 px-6 whitespace-nowrap">
+                        <a href="{{ route('inventario.show', $inventario->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                    </td>
+                    <td class="py-4 px-6 whitespace-nowrap">
+                        <a href="{{ route('inventario.edit', $inventario->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                    </td>
+                    <td class="py-4 px-6 whitespace-nowrap">
+                        <form action="{{ route('inventario.destroy', $inventario->id) }}" method="POST"
+                            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach 
             </tbody>

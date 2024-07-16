@@ -11,37 +11,54 @@
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
             <thead class="bg-[#b1b1b1] text-white">
                 <tr>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Id</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">RFC</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No.orden</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Dias Restantes</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Año</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Placas</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Anticipo</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Por pagar</th>
-                    <th class="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Id</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Fecha</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Razon Social</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">RFC</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">No.orden</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Dias Restantes</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Vehiculo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Modelo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Año</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Placas</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Anticipo</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Por pagar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Total</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">AMostar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Editar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Eliminar</th>
                 </tr>
             </thead>
             <tbody class="text-gray-700">
                 @foreach ($creditos as $credito)
                     <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->id }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->fecha }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->razon_social }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->RFC }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->no_orden }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->dias_restantes }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->vehiculo }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->modelo }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->anio }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->placas }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->anticipo }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->por_pagar }}</td>
-                        <td class="py-4 px-6 whitespace-nowrap">{{ $credito->total }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->id }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->fecha }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->razon_social }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->RFC }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->no_orden }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->dias_restantes }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->vehiculo }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->modelo }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->anio }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->placas }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->anticipo }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->por_pagar }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $credito->total }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <a href="{{ route('creditos.show', $credito->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                        </td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <a href="{{ route('creditos.edit', $credito->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                        </td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <form action="{{ route('creditos.destroy', $credito->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
