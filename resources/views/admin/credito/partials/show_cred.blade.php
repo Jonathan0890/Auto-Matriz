@@ -1,11 +1,11 @@
 @extends('test.layout')
 
 @section('content')
-    <div class="container mx-auto mt-20">
+    <div class="Flex justify-center items-center min-h-screen bg-gray-100">
         <div class="bg-white rounded-lg shadow-lg w-full md:w-3/4 mx-auto p-6">
             <div class="p-4">
-                <h2 class="text-xl font-semibold mb-4">Información del Crédito</h2>
-                <div class="grid grid-cols-1 gap-4">
+                <h2 class="text-3xl font-semibold mb-8 text-center">Información del Crédito</h2>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div>
                         <label class="text-gray-600">Fecha:</label>
                         <p class="text-gray-800 tracking-normal">{{ $credito->fecha }}</p>
@@ -40,7 +40,7 @@
                     </div>
                     <div>
                         <label class="text-gray-600">Placa:</label>
-                        <p class="text-gray-800 tracking-normal">{{ $credito->placa }}</p>
+                        <p class="text-gray-800 tracking-normal">{{ $credito->placas }}</p>
                     </div>
                     <div>
                         <label class="text-gray-600">Anticipo:</label>
@@ -54,10 +54,10 @@
                         <label class="text-gray-600">Total:</label>
                         <p class="text-gray-800 tracking-normal">{{ $credito->total }}</p>
                     </div>
-                </div>
-                <div class="mt-6">
-                    <a href="{{ route('creditos.index') }}"
-                        class="bg-indigo-500 text-center text-white py-2 px-4 rounded-lg hover:bg-indigo-600 inline-block">REGRESAR</a>
+                    <div class="mt-6 items-center justify-center">
+                        <a href="{{ route('creditos.index') }}"
+                            class="bg-indigo-500 text-center text-white py-2 px-4 rounded-lg hover:bg-indigo-600 inline-block">REGRESAR</a>
+                    </div>
                 </div>
             </div>
         </div>

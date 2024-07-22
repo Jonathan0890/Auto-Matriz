@@ -11,7 +11,7 @@ class StoreOrdenServicioRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,20 @@ class StoreOrdenServicioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'fecha' => 'required',
+            'razon_social' => 'required',
+            'estado' => 'required',
+            'no_orden' => 'required',
+            'vehiculo' => 'required',
+            'modelo' => 'required',
+            'anio' => 'required',
+            'placa' => 'required',
+            'reporte_cliente' => 'required',
+            'kilometraje' => 'required',
+            'no_economico' => 'required',
+            'sub_total' => 'required',
+            'impuestos' => 'required',    
+            'total' => 'required',
         ];
     }
 }

@@ -36,36 +36,35 @@ class OrdenServicioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(OrdenServicio $ordenServicio)
+    public function show(OrdenServicio $ordeneserv)
     {
-        $ordenServicio = OrdenServicio::find($ordenServicio->id);
-        return view('admin.orden-servicio.partials.show_ord', compact('ordenServicio'));
+        return view('admin.orden-servicio.partials.show_ord', compact('ordeneserv'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(OrdenServicio $ordenServicio)
+    public function edit(OrdenServicio $ordeneserv)
     {
-        $ordenServicio = OrdenServicio::find($ordenServicio->id);
-        return view('admin.orden-servicio.partials.edit_ord', compact('ordenServicio'));
+        $ordeneserv = OrdenServicio::find($ordeneserv->id);
+        return view('admin.orden-servicio.partials.edit_ord', compact('ordeneserv'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateOrdenServicioRequest $request, OrdenServicio $ordenServicio)
+    public function update(UpdateOrdenServicioRequest $request, OrdenServicio $ordeneserv)
     {
-        $ordenServicio->update($request->all());
-        return redirect()->route('ordenservicio.show', $ordenServicio->id);
+        $ordeneserv->update($request->all());
+        return redirect()->route('ordenservicio.show', $ordeneserv->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(OrdenServicio $ordenServicio)
+    public function destroy(OrdenServicio $ordeneserv)
     {
-        $ordenServicio->delete();
+        $ordeneserv->delete();
         return redirect()->route('ordenservicio.index');
     }
 }

@@ -9,5 +9,13 @@ class Facturacion extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'number_factura',
+        'cliente_id',
+        'fecha_emision',
+        'fecha_vencimiento',
+        'total',
+        'estado',
+        'observacion'
+    ];
 }

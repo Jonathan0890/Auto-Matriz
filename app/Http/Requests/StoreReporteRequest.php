@@ -11,7 +11,7 @@ class StoreReporteRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreReporteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nombre' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'tipo' => 'required|max:255',
+            'descripcion' => 'required|string',
         ];
     }
 }

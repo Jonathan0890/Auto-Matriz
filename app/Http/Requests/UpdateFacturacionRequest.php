@@ -11,7 +11,7 @@ class UpdateFacturacionRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class UpdateFacturacionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'number_factura' => 'required',
+            'cliente_id' => 'required',
+            'fecha_emision' => 'required',
+            'fecha_vencimiento' => 'required',
+            'total' => 'required',
+            'estado' => 'required',
+            'observacion' => 'required',
         ];
     }
 }

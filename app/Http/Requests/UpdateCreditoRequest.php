@@ -11,7 +11,7 @@ class UpdateCreditoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,18 @@ class UpdateCreditoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'fecha' => 'required',
+            'razon_social' => 'required',
+            'RFC' => 'required',
+            'no_orden' => 'required',
+            'dias_restantes' => 'required',
+            'vehiculo' => 'required',
+            'modelo' => 'required',
+            'anio' => 'required',
+            'placa' => 'required',
+            'anticipo' => 'required',
+            'por_pagar' => 'required',
+            'total' => 'required',
         ];
     }
 }

@@ -22,7 +22,8 @@ class StorePaqueteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nombre' => 'required|accepted|max:255',
+            'total' => 'required|max:255',
         ];
     }
 }

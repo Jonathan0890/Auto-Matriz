@@ -11,7 +11,7 @@ class UpdateInventarioRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class UpdateInventarioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'folio_inventario' => 'required',
+            'clave_unica_producto' => 'required',
+            'numero_producto' => 'required',
+            'descripcion_producto' => 'required',
+            'cantidad' => 'required',
+            'precio_producto' => 'required',
+            'monto' => 'required',
         ];
     }
 }

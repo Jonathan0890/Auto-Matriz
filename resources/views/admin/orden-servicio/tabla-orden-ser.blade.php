@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<h1 class="text-3xl font-medium">ORDEN SERVICIO</h1>
+    <h1 class="text-3xl font-medium">ORDEN SERVICIO</h1>
 
     <div>
         <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
@@ -33,39 +33,41 @@
                 </tr>
             </thead>
             <tbody class="text-gray-700">
-                @foreach($ordeneservs as $ordeneserv)
-                <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->id }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->fecha }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->razonsocial }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->estado }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_orden }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->vehiculo }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->modelo }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->anio }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->placa }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_economico }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->sub_total }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->impuestos }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->total }}</td>
-                    <td class="py-2 px-3 whitespace-nowrap">
-                        <a href="{{ route('ordenservicio.show', $ordeneserv->id) }}" class="text-blue-500 hover:text-blue-700">Mostrar</a>
-                    </td>
-                    <td class="py-2 px-3 whitespace-nowrap">
-                        <a href="{{ route('ordenservicio.edit', $ordeneserv->id) }}" class="text-yellow-500 hover:text-yellow-700">Editar</a>
-                    </td>
-                    <td class="py-2 px-3 whitespace-nowrap">
-                        <form action="{{ route('ordenservicio.destroy', $ordeneserv->id) }}" method="POST"
-                            onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach 
+                @foreach ($ordeneservs as $ordeneserv)
+                    <tr class="border-b border-gray-200 hover:bg-gray-100 transition duration-200">
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->id }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->fecha }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->razonsocial }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->estado }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_orden }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->vehiculo }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->modelo }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->anio }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->placa }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->kilometraje }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->no_economico }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->sub_total }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->impuestos }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">{{ $ordeneserv->total }}</td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <a href="{{ route('ordenservicio.show', $ordeneserv->id) }}"
+                                class="text-blue-500 hover:text-blue-700">Mostrar</a>
+                        </td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <a href="{{ route('ordenservicio.edit', $ordeneserv->id) }}"
+                                class="text-yellow-500 hover:text-yellow-700">Editar</a>
+                        </td>
+                        <td class="py-2 px-3 whitespace-nowrap">
+                            <form action="{{ route('ordenservicio.destroy', $ordeneserv->id) }}" method="POST"
+                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
 
