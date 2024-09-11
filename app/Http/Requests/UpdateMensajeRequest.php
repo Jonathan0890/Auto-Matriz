@@ -22,9 +22,9 @@ class UpdateMensajeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required',
-            'email' => 'required',
-            'mensaje' => 'required',
+            'nombre' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'mensaje' => 'required|string|max:2000',
         ];
     }
 }

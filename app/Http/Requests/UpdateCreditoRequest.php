@@ -22,18 +22,18 @@ class UpdateCreditoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'fecha' => 'required',
-            'razon_social' => 'required',
-            'RFC' => 'required',
-            'no_orden' => 'required',
-            'dias_restantes' => 'required',
-            'vehiculo' => 'required',
-            'modelo' => 'required',
-            'anio' => 'required',
-            'placa' => 'required',
-            'anticipo' => 'required',
-            'por_pagar' => 'required',
-            'total' => 'required',
+            'fecha' => 'required|date',
+            'razon_social' => 'required|string|max:255',
+            'RFC' => 'required|string|max:20',
+            'no_orden' => 'required|string|max:50',
+            'dias_restantes' => 'required|integer|min:0',
+            'vehiculo' => 'required|string|max:255',
+            'modelo' => 'required|string|max:255',
+            'anio' => 'required|integer|min:1900|max:' . date('Y'),
+            'placa' => 'required|string|max:20',
+            'anticipo' => 'required|numeric|min:0',
+            'por_pagar' => 'required|numeric|min:0',
+            'total' => 'required|numeric|min:0',
         ];
     }
 }

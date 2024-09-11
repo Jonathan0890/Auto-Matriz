@@ -15,6 +15,8 @@ use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\ReportIssueController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\SuperAdminController;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/dashboard', function () {
@@ -34,6 +36,11 @@ Route::name('user')->group(function () {
     route::get('/', function () {
         return view('user.principal');
     });
+});
+
+route::get('contados', function () {
+    Mail::to('Jonathan.coox15@gmail.com')->send(new OrderShipped);
+    return "Emial enviado";
 });
 
 route::post('/report-issue', [ReportIssueController::class, 'store'])->name('report.issue');

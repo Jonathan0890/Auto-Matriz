@@ -22,13 +22,13 @@ class UpdateInventarioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'folio_inventario' => 'required',
-            'clave_unica_producto' => 'required',
-            'numero_producto' => 'required',
-            'descripcion_producto' => 'required',
-            'cantidad' => 'required',
-            'precio_producto' => 'required',
-            'monto' => 'required',
+            'folio_inventario' => 'required|string|max:50',
+            'clave_unica_producto' => 'required|string|max:50',
+            'numero_producto' => 'required|string|max:50',
+            'descripcion_producto' => 'required|string|max:500',
+            'cantidad' => 'required|integer|min:0',
+            'precio_producto' => 'required|numeric|min:0',
+            'monto' => 'required|numeric|min:0',
         ];
     }
 }

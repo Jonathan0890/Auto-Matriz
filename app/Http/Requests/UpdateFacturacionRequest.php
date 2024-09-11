@@ -22,13 +22,13 @@ class UpdateFacturacionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'number_factura' => 'required',
-            'cliente_id' => 'required',
-            'fecha_emision' => 'required',
-            'fecha_vencimiento' => 'required',
-            'total' => 'required',
-            'estado' => 'required',
-            'observacion' => 'required',
+            'number_factura' => 'required|string|max:50',
+            'cliente_id' => 'required|integer|exists:clientes,id',
+            'fecha_emision' => 'required|date',
+            'fecha_vencimiento' => 'required|date|after_or_equal:fecha_emision',
+            'total' => 'required|numeric|min:0',
+            'estado' => 'required|string|max:50',
+            'observacion' => 'nullable|string|max:500',
         ];
     }
 }

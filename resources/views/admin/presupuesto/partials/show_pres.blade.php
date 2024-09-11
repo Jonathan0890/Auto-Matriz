@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <label class="text-gray-600">Reporte de cliente:</label>
-                    <p class="text-xl text-gray-800">{{ $presupuesto->reporte }}</p>
+                    <p class="text-xl text-gray-800">{{ $presupuesto->reporte_cliente }}</p>
                 </div>
                 <div>
                     <label class="text-gray-600">Kilometraje:</label>

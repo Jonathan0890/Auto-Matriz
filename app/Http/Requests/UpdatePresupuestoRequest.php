@@ -22,20 +22,20 @@ class UpdatePresupuestoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'fecha' => 'required',
-            'raszon_social' => 'required',
-            'estado' => 'required',
-            'no_orden' => 'required',
-            'vehiculo' => 'required',
-            'modelo' => 'required',
-            'anio' => 'required',
-            'placa' => 'required',
-            'reporte_cliente' => 'required',
-            'kilometraje' => 'required',
-            'no_economico' => 'required',
-            'sub_total' => 'required',
-            'impuestos' => 'required',    
-            'total' => 'required',
+            'fecha' => 'required|date',
+            'razon_social' => 'required|string|max:255',
+            'estado' => 'required|string|max:255',
+            'no_orden' => 'required|string|max:255',
+            'vehiculo' => 'required|string|max:255',
+            'modelo' => 'required|string|max:255',
+            'year' => 'required|integer',
+            'placa' => 'required|string|max:255',
+            'reporte_cliente' => 'required|string',
+            'kilometraje' => 'required|integer',
+            'no_economico' => 'required|string|max:255',
+            'sub_total' => 'required|numeric',
+            'impuestos' => 'required|numeric',
+            'total' => 'required|numeric',
         ];
     }
 }

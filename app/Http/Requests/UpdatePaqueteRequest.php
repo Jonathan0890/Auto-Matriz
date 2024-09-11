@@ -22,8 +22,8 @@ class UpdatePaqueteRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nombre' => 'required|accepted|max:255',
-            'total' => 'required|max:255',
+            'nombre' => 'required|string|max:255',
+            'total' => 'required|numeric|min:0',
         ];
     }
 }

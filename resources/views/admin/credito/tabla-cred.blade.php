@@ -24,7 +24,7 @@
                     <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Anticipo</th>
                     <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Por pagar</th>
                     <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Total</th>
-                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">AMostar</th>
+                    <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Mostar</th>
                     <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Editar</th>
                     <th class="py-2 px-3 text-left text-xs font-medium uppercase tracking-wider">Eliminar</th>
                 </tr>

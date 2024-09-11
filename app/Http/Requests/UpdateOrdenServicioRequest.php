@@ -22,20 +22,20 @@ class UpdateOrdenServicioRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'fecha' => 'required',
-            'razon_social' => 'required',
-            'estado' => 'required',
-            'no_orden' => 'required',
-            'vehiculo' => 'required',
-            'modelo' => 'required',
-            'anio' => 'required',
-            'placa' => 'required',
-            'reporte_cliente' => 'required',
-            'kilometraje' => 'required',
-            'no_economico' => 'required',
-            'sub_total' => 'required',
-            'impuestos' => 'required',    
-            'total' => 'required',
+            'fecha' => 'required|date',
+            'razon_social' => 'required|string|max:255',
+            'estado' => 'required|string|max:255',
+            'no_orden' => 'required|string|max:50',
+            'vehiculo' => 'required|string|max:255',
+            'modelo' => 'required|string|max:255',
+            'anio' => 'required|integer|min:1900|max:' . date('Y'),
+            'placa' => 'required|string|max:50',
+            'reporte_cliente' => 'required|string|max:255',
+            'kilometraje' => 'required|numeric|min:0',
+            'no_economico' => 'required|string|max:50',
+            'sub_total' => 'required|numeric|min:0',
+            'impuestos' => 'required|numeric|min:0',
+            'total' => 'required|numeric|min:0',
         ];
     }
 }

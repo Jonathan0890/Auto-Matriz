@@ -47,7 +47,6 @@ class PresupuestoController extends Controller
      */
     public function edit(Presupuesto $presupuesto)
     {
-        $presupuesto = Presupuesto::find($presupuesto->id);
         return view('admin.presupuesto.partials.edit_pres', compact('presupuesto'));
     }
 
